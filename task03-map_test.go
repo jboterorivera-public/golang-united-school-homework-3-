@@ -10,7 +10,7 @@ func TestSortMapValues(t *testing.T) {
 	want := []string{"cc", "aa", "bb"}
 	got := sortMapValues(testingMap)
 
-	if !ArrayEqual(want, got) {
+	if !arrayEqual(want, got) {
 		t.Errorf("TestSortMapValues = %v, want %v", got, want)
 	}
 }

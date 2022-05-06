@@ -1,6 +1,6 @@
 package homework
 
-func ArrayEqual[T comparable](firstArray []T, secondArray []T) bool {
+func arrayEqual[T comparable](firstArray []T, secondArray []T) bool {
 	if len(firstArray) != len(secondArray) {
 		return false
 	}

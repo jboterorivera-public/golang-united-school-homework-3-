@@ -10,7 +10,7 @@ func TestReverse(t *testing.T) {
 	want := []int64{69, 89, 20, 41}
 	got := reverse(testingArray)
 
-	if !ArrayEqual(want, got) {
+	if !arrayEqual(want, got) {
 		t.Errorf("TestReverse = %v, want %v", got, want)
 	}
 }
