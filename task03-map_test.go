@@ -10,7 +10,21 @@ func TestSortMapValues(t *testing.T) {
 	want := []string{"cc", "aa", "bb"}
 	got := sortMapValues(testingMap)
 
-	if !arrayEqual(want, got) {
+	if !arrayEqualString(want, got) {
 		t.Errorf("TestSortMapValues = %v, want %v", got, want)
 	}
+}
+
+func arrayEqualString(firstArray, secondArray []string) bool {
+	if len(firstArray) != len(secondArray) {
+		return false
+	}
+
+	for index, element := range firstArray {
+		if element != secondArray[index] {
+			return false
+		}
+	}
+
+	return true
 }
